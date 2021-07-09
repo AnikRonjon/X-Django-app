@@ -1,0 +1,4 @@
+0*.py
+venv/*
+.idea
+db.sqlite3
