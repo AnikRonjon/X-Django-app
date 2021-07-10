@@ -2,20 +2,5 @@
 {% block title %}Home Page{% endblock %}
 
 {% block container %}
-    <div class="container">
-        <div class="row">
-            <div class="col-6 mx-auto mt-5">
-                <h2>This is home page.</h2>
-                <h3 id="app">{{ text }}</h3>
-            </div>
-        </div>
-    </div>
-    <script>
-    var socket = new WebSocket('ws://localhost:8000/ws/some_url/');
-    socket.onmessage = function (event){
-        var data = JSON.parse(event.data);
-        console.log(data);
-        document.querySelector('#app').innerText = data.message;
-    }
-    </script>
+
 {% endblock %}
