@@ -8,7 +8,8 @@ admin.site.site_title = "Yam's site"
 admin.site.site_header = "AptYam's Dashboard"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('secret/', admin.site.urls),
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('auth/', include('rest_framework.urls')),
     path('', include('school.urls', namespace='school')),
     path('api/', include('school.api_urls', namespace='api_school')),
