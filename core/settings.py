@@ -27,6 +27,7 @@ INSTALLED_APPS = [
 
     'school',
     'rest_framework',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ TEMPLATES = [
     },
 ]
 
+ASGI_APPLICATION = 'core.asgi.application'
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
