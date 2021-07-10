@@ -1,9 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.authentication import BasicAuthentication, SessionAuthentication
-from rest_framework.permissions import IsAdminUser, DjangoModelPermissionsOrAnonReadOnly
-from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from django_filters.rest_framework import DjangoFilterBackend
-from . import models
 from .serializers import *
 
 
