@@ -11,6 +11,7 @@ urlpatterns = [
     path('secret/', admin.site.urls),
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('auth/', include('rest_framework.urls')),
+    path('captcha/', include('captcha.urls')),
     path('', include('school.urls', namespace='school')),
     path('api/', include('school.api_urls', namespace='api_school')),
 

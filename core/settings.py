@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'channels',
     'admin_honeypot',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -123,5 +124,8 @@ REST_FRAMEWORK = {
         'anon': '2/day',
         'user': '5/hour'
     }
-
 }
+
+
+CAPTCHA_FOREGROUND_COLOR = 'red'
+CAPTCHA_BACKGROUND_COLOR = '#00aacc'
