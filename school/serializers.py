@@ -5,14 +5,14 @@ from .models import Student, Teacher, ClassLevel
 class StudentSerializers(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = ('name', 'email', 'class_level', 'roll')
         depth = 1
 
 
 class TeacherSerializers(serializers.ModelSerializer):
     class Meta:
         model = Teacher
-        fields = '__all__'
+        fields = ('name', 'email', 'teach', 'joined')
         depth = 1
 
 

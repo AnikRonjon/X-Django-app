@@ -1,6 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from django_filters.rest_framework import DjangoFilterBackend
-from .serializers import *
+from .models import Student, ClassLevel, Teacher
+from .serializers import StudentSerializers, ClassLevelSerializers, TeacherSerializers
 
 
 class StudentModelViewSet(ModelViewSet):

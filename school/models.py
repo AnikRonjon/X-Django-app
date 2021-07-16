@@ -11,14 +11,14 @@ class Custom(models.Model):
 
 
 class ClassLevel(models.Model):
-    level = models.CharField(max_length=8)
+    level = models.CharField(max_length=8, unique=True)
 
     def __str__(self):
         return self.level
 
 
 class Student(Custom):
-    class_level = models.ForeignKey(ClassLevel, on_delete=models.PROTECT, default='', related_name='study_on')
+    class_level = models.ForeignKey(ClassLevel, on_delete=models.PROTECT, related_name='study_on')
     roll = models.PositiveIntegerField(unique=True)
 
     def __str__(self):
