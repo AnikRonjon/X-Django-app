@@ -17,7 +17,7 @@ class TeacherSerializers(serializers.ModelSerializer):
 
 
 class ClassLevelSerializers(serializers.ModelSerializer):
-    study_on = StudentSerializers(many=True, read_only=True)
+    study_on = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='api_school:student-detail')
 
     class Meta:
         model = ClassLevel
