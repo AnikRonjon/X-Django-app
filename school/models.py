@@ -18,7 +18,7 @@ class ClassLevel(models.Model):
 
 
 class Student(Custom):
-    class_level = models.ForeignKey(ClassLevel, on_delete=models.PROTECT, related_name='study_on')
+    class_level = models.ForeignKey(ClassLevel, on_delete=models.CASCADE, related_name='study_on')
     roll = models.PositiveIntegerField(unique=True)
 
     def __str__(self):
