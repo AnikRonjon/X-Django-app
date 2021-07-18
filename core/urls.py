@@ -9,6 +9,7 @@ admin.site.site_header = "AptYam's Dashboard"
 
 urlpatterns = [
     path('secret/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('auth/', include('rest_framework.urls')),
     path('captcha/', include('captcha.urls')),

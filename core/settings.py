@@ -126,6 +126,7 @@ REST_FRAMEWORK = {
     }
 }
 
-
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 CAPTCHA_FOREGROUND_COLOR = 'red'
 CAPTCHA_BACKGROUND_COLOR = '#00aacc'

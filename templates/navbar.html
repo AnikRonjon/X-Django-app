@@ -6,4 +6,22 @@
         <li class="active"><a href="{% url 'school:student_registration' %}">Registration</a></li>
     </ul>
 
+{#    {% if request.user.is_authenticated %}#}
+{#    <ul class="nav navbar-nav">#}
+{#        <li class="active"><a href="{% url 'school:profile' %}">Profile</a></li>#}
+{#    </ul>#}
+{#    {% endif %}#}
+
+    {% if request.user.is_authenticated %}
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'logout' %}">logout</a></li>
+        </ul>
+    {% endif %}
+
+    {% if not request.user.is_authenticated %}
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'login' %}">login</a></li>
+        </ul>
+    {% endif %}
+
 </nav>

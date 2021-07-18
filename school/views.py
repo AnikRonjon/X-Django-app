@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
 from .forms import StudentForm
 from .models import Student
 
@@ -18,3 +20,7 @@ def student_reg_view(request):
     else:
         form = StudentForm()
     return render(request, 'school/student_reg.html', {'form': form})
+
+
+def profile(request):
+    return render(request, 'registration/profile.html')
